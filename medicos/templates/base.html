@@ -13,9 +13,110 @@
     
   </head>
   <body class="overflow-x-hidden">
-    <nav class="bg-blue-500 p-4 text-white">
-      <div class="container mx-auto">
-        <a href="/" class="text-lg font-bold">KayaDoc</a>
+    <nav class="fixed z-50 flex justify-center w-full top-8 opacity-70">
+      <div class="flex flex-wrap items-center w-full max-w-screen-xl p-4 bg-[#232323] mx-2.5 rounded-3xl md:mx-8 md:px-8">
+        <a class="flex items-center space-x-3 rtl:space-x-reverse me-20" href="/">
+          <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20doc%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250307%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250307T202121Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=3d5841995cda17a7d8928c396f6edfe0d1f88c7290c1ecdd801adfce122d218d" class="h-12" alt="Kaya doc verde">
+        </a>
+    
+        <button data-collapse-toggle="navbar-multi-level" type="button" class="flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg ms-auto md:hidden hover:bg-theme_color2-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:flex md:w-auto" id="navbar-multi-level">
+          <ul class="flex flex-col p-4 mt-4 font-medium text-white border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <li>
+              <button id="dropdownNavbarLink1" data-dropdown-toggle="dropdownNavbar1" class="flex items-center justify-between w-full px-3 py-2 text-white hover:bg-theme_color2-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+                Funcionalidades
+                <svg class="svg-inline--fa fa-caret-down ms-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg><!-- <i class="fas fa-caret-down ms-4"></i> Font Awesome fontawesome.com -->
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar1" class="z-10 hidden font-normal bg-[#232323] rounded-lg shadow-sm w-44" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(300px, 94px);" data-popper-placement="bottom">
+                <ul class="py-2 text-sm text-theme_color2-100" aria-labelledby="dropdownLargeButton1">
+                  <li>
+                    <a href="/funcionalidades/descubra/" class="block px-4 py-2 hover:bg-theme_color2-500">Descubra Novos Produtos</a>
+                  </li>
+                  <li>
+                    <a href="/funcionalidades/biblioteca/" class="block px-4 py-2 hover:bg-theme_color2-500">Biblioteca de Estudos</a>
+                  </li>
+                  <li>
+                    <a href="/funcionalidades/webinars/" class="block px-4 py-2 hover:bg-theme_color2-500">Webinars</a>
+                  </li>
+                  <li>
+                    <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Copiloto</a>
+                  </li>
+                  <li>
+                    <a href="/funcionalidades/beneficios/" class="block px-4 py-2 hover:bg-theme_color2-500">Benefícios e Parcerias</a>
+                  </li>
+                  <li>
+                    <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Prontuário</a>
+                  </li>
+                  <li>
+                    <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Anamnese</a>
+                  </li>
+                  <li>
+                    <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Agenda</a>
+                  </li>
+                  <li>
+                    <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Perfil Público</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="hidden">
+              <a href="/" class="flex items-center justify-between w-full px-3 py-2 text-white hover:bg-theme_color2-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+                Sobre
+              </a>
+            </li>
+            
+            <li>
+              <button id="dropdownNavbarLink2" data-dropdown-toggle="dropdownNavbar2" class="flex items-center justify-between w-full px-3 py-2 text-white hover:bg-theme_color2-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+                Paciente
+                <svg class="svg-inline--fa fa-caret-down ms-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg><!-- <i class="fas fa-caret-down ms-4"></i> Font Awesome fontawesome.com -->
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar2" class="z-10 hidden font-normal bg-[#232323] rounded-lg shadow-sm w-44" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(440px, 94px);" data-popper-placement="bottom">
+                <ul class="py-2 text-sm text-theme_color2-100" aria-labelledby="dropdownLargeButton2">
+                  <li>
+                    <a href="/medicos/" class="block px-4 py-2 hover:bg-theme_color2-500">Médicos Prescritores</a>
+                  </li>
+                  <li>
+                    <a href="/beneficios_lista/" class="block px-4 py-2 hover:bg-theme_color2-500">Benefícios da Cannabis</a>
+                  </li>
+                  <li>
+                    <a href="/glossario_lista/" class="block px-4 py-2 hover:bg-theme_color2-500">Glossário Canábico</a>
+                  </li>
+                  <li>
+                    <a href="https://kayamind.com/" class="block px-4 py-2 hover:bg-theme_color2-500">Blog da Saúde</a>
+                  </li>
+                  <li>
+                    <a href="/beneficios_lista/" class="block px-4 py-2 hover:bg-theme_color2-500">Condições Médicas</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="flex py-2">
+              <a href="/cadastro_medico_form/" class="items-center justify-center px-12 py-1 text-lg border md:hidden text-theme_color2-600 bg-theme_color2-100 rounded-3xl border-theme_color2-100 hover:bg-theme_color2-600 hover:text-theme_color2-100">
+                Teste gratis
+              </a>
+            </li>
+            <li class="flex py-2">
+              <a href="/usuario/entrar/" class="items-center justify-center px-12 py-1 text-lg text-white border md:hidden rounded-3xl border-theme_color2-100 hover:bg-theme_color2-100 hover:text-theme_color2-600">
+                Login
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="hidden space-x-4 ms-auto md:flex">
+          <a href="/cadastro_medico_form/" class="items-center justify-center hidden px-12 py-1 text-lg border md:flex text-theme_color2-600 bg-theme_color2-100 rounded-3xl border-theme_color2-100 hover:bg-theme_color2-600 hover:text-theme_color2-100">
+            Teste gratis
+          </a>
+          <a href="/usuario/entrar/" class="items-center justify-center hidden px-12 py-1 text-lg text-white border rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color2-100 hover:text-theme_color2-600">
+            Login
+          </a>
+        </div>
       </div>
     </nav>
 
