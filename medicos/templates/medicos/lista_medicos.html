@@ -2,56 +2,46 @@
 {% block content %}
 <div class="container mx-auto p-4">
   <div class="mb-6 text-center">
-    <h2 class="text-2xl font-bold mb-4 text-theme_color2-400 md:text-3xl lg:text-5xl" style="font-family: 'Roboto', sans-serif">
+    <h2 class="text-2xl font-bold mb-4 text-theme_color2-400 md:text-3xl lg:text-5xl" style="font-family: Marvin Visions Variable;">
       Encontre seu especialista em cannabis medicinal
     </h2>
     <p class="font-semibold mb-7 md:text-2xl">
       Busque por especialidade, pelo nome do profissional da saúde ou utilize uma das palavras-chave abaixo.
     </p>
-    
-    <!-- Filtro por Especialidade (tags clicáveis) -->
+
+    <!-- Filtro por Especialidade com radio buttons -->
     <div class="my-4">
-      <!-- Tag "Todas" sempre visível -->
-      <a href="?specialty=all&preco_min={{ request.GET.preco_min }}&preco_max={{ request.GET.preco_max }}&search={{ request.GET.search }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300 inline-block mb-2 mr-2">
-        Todas
-      </a>
+      <form action="/medicos/" method="get" id="filter-form">
+        <div class="mb-4">
+          <div class="flex flex-wrap justify-center gap-6 mb-8">
+            <!-- Especialidade "Todas" -->
+            <div class="flex items-center">
+  <input type="radio" id="all" name="specialty" value="all" {% if request.GET.specialty == 'all' %} checked {% endif %} class="hidden peer" onchange="showAll()">
+  <label for="all" class="inline-flex items-center justify-center px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-400">
+    Todas
+  </label>
+</div>
+            
+            <!-- Especialidades específicas -->
+            {% for especialidade in especialidades %}
+            <div class="flex items-center specialty-option">
+              <input type="radio" id="{{ especialidade }}" name="specialty" value="{{ especialidade }}" {% if request.GET.specialty == especialidade %} checked {% endif %} class="hidden peer" onchange="filterSpecialty(this)">
+              <label for="{{ especialidade }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-400">{{ especialidade }}</label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
 
-      <!-- Outras especialidades, condicionalmente visíveis -->
-      {% if request.GET.specialty == 'all' %}
-      <div>
-        {% for especialidade in especialidades %}
-        <a href="?specialty={{ especialidade }}&preco_min={{ request.GET.preco_min }}&preco_max={{ request.GET.preco_max }}&search={{ request.GET.search }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300 inline-block mb-2 mr-2">
-          {{ especialidade }}
-        </a>
-        {% endfor %}
-      </div>
-      {% elif request.GET.specialty %}
-      <div>
-        <a href="?specialty={{ request.GET.specialty }}&preco_min={{ request.GET.preco_min }}&preco_max={{ request.GET.preco_max }}&search={{ request.GET.search }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300 inline-block mb-2 mr-2">
-          {{ request.GET.specialty }}
-        </a>
-      </div>
-      {% else %}
-      <div>
-        {% for especialidade in especialidades %}
-        <a href="?specialty={{ especialidade }}&preco_min={{ request.GET.preco_min }}&preco_max={{ request.GET.preco_max }}&search={{ request.GET.search }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300 inline-block mb-2 mr-2">
-          {{ especialidade }}
-        </a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
-
-    <!-- Barra de Pesquisa -->
-    <form action="/medicos/" method="get">
-      <input type="text" name="search" placeholder="Digite o nome do médico" class="block w-full text-sm text-gray-900 bg-gray-100 border-0 rounded-lg shadow-lg md:py-5 md:px-12 md:rounded-full ps-10 focus:ring-blue-500 focus:border-blue-500" value="{{ request.GET.search }}"/>
-    </form>
-
-    <!-- Filtro por Preço -->
-    <div class="my-4 text-center">
-      <span class="mr-2 text-lg font-semibold">Ordenar por Preço:</span>
-      <a href="?sort=preco_asc&specialty={{ request.GET.specialty }}&search={{ request.GET.search }}" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">Menor Valor</a>
-      <a href="?sort=preco_desc&specialty={{ request.GET.specialty }}&search={{ request.GET.search }}" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">Maior Valor</a>
+        <!-- Barra de Pesquisa -->
+        <div class="relative mb-4">
+          <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-3">
+            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+              <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+            </svg>
+          </div>
+          <input type="text" name="search" placeholder="Digite o nome ou palavra-chave" class="block w-full text-sm text-gray-900 bg-gray-100 border-0 rounded-lg shadow-lg md:py-5 md:px-12 md:rounded-full pl-10 focus:ring-blue-500 focus:border-blue-500" value="{{ request.GET.search }}">
+        </div>
+      </form>
     </div>
 
     <!-- Exibição dos Médicos Filtrados -->
@@ -62,7 +52,7 @@
           <a class="w-full mb-4 cursor-pointer" href="{% url 'perfil_medico' medico.id %}">
             <div class="w-full text-center avatar">
               <div class="w-32 mx-auto sm:w-full">
-                <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="{{ medico.foto_perfil }}" alt="Foto de perfil de {{ medico.nome }}" width="200" height="200"/>
+                <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="{{ medico.foto_perfil }}" alt="Foto de perfil de {{ medico.nome }}">
               </div>
             </div>
           </a>
@@ -80,7 +70,7 @@
           </div>
           <div class="flex flex-col gap-2 py-4 bg-white">
             <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="{% url 'perfil_medico' medico.id %}">AGENDAR CONSULTA</a>
-            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="{% url 'perfil_medico' medico.id %}">VER PERFIL</a>
+            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="{% url 'perfil_medico' medico.id %}">VER MAIS</a>
           </div>
         </div>
       </div>
@@ -88,4 +78,41 @@
     </div>
   </div>
 </div>
+
+<script>
+  // Função para mostrar todas as especialidades quando "Todas" é selecionada
+  function showAll() {
+    const specialtyOptions = document.querySelectorAll('.specialty-option');
+    specialtyOptions.forEach(option => {
+      option.style.display = 'inline-flex'; // Mostra todas novamente
+    });
+  }
+
+  // Função para filtrar as especialidades
+  function filterSpecialty(radioButton) {
+    const selectedValue = radioButton.value;
+    const specialtyOptions = document.querySelectorAll('.specialty-option');
+
+    if (selectedValue !== 'all') {
+      specialtyOptions.forEach(option => {
+        // Esconde as opções que não são a selecionada
+        if (option.querySelector('input').value !== selectedValue) {
+          option.style.display = 'none';
+        } else {
+          option.style.display = 'inline-flex';
+        }
+      });
+    }
+  }
+
+  // Se o "Todas" for selecionado, exibe todas as opções
+  document.querySelectorAll('input[name="specialty"]').forEach(input => {
+    input.addEventListener('change', function () {
+      if (this.value === 'all') {
+        showAll(); // Se "Todas" for selecionado, mostra todas as opções
+      }
+    });
+  });
+</script>
+
 {% endblock %}

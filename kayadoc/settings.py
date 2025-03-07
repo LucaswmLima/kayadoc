@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'medicos',
     'theme',
     'django_browser_reload',
+    'fontawesomefree'
+
 ]
 
 MIDDLEWARE = [
