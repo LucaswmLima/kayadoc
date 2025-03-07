@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mx-auto p-4">
+  <h1 class="text-2xl font-bold">Lista de Médicos</h1>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+    {% for medico in medicos %}
+    <div class="bg-white p-4 rounded shadow-lg">
+      <h2 class="font-semibold">{{ medico.nome }}</h2>
+      <p>{{ medico.especialidade }}</p>
+
+      <!-- Exibir Foto -->
+      {% if medico.foto_perfil %}
+      <img
+        src="{{ medico.foto_perfil }}"
+        alt="Foto de {{ medico.nome }}"
+        class="w-full h-40 object-cover rounded mb-4"
+      />
+      {% else %}
+      <p>Sem foto disponível</p>
+      {% endif %}
+
+      <!-- Exibir Preço -->
+      <p><strong>Preço:</strong> R$ {{ medico.preco }}</p>
+
+      <!-- Exibir Tempo de Consulta -->
+      <p><strong>Tempo de Consulta:</strong> {{ medico.tempo_consulta}}</p>
+
+      <a href="{% url 'perfil_medico' medico.id %}" class="text-blue-500"
+        >Ver Perfil</a
+      >
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

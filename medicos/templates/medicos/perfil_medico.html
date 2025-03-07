@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mx-auto p-4">
+  <h1 class="text-3xl font-bold">{{ medico.nome }}</h1>
+  <p class="text-lg">{{ medico.especialidade }}</p>
+  <p>{{ medico.descricao }}</p>
+  <div class="mt-4">
+    <h2 class="text-xl font-semibold">Contato</h2>
+    <p>Email: {{ medico.email }}</p>
+    <p>Telefone: {{ medico.telefone }}</p>
+  </div>
+</div>
+{% endblock %}

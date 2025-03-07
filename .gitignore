@@ -1,0 +1,18 @@
+# Bytecode do Python
+*.pyc
+__pycache__/
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de log
+*.log
+
+# Configuração do editor
+.vscode/
+.idea/
+
+# Dependências do Python
+venv/
+env/
+*.egg-info/
