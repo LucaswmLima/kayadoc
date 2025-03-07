@@ -1,34 +1,91 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 <div class="container mx-auto p-4">
-  <h1 class="text-2xl font-bold">Lista de Médicos</h1>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-    {% for medico in medicos %}
-    <div class="bg-white p-4 rounded shadow-lg">
-      <h2 class="font-semibold">{{ medico.nome }}</h2>
-      <p>{{ medico.especialidade }}</p>
+  <div class="mb-6 text-center">
+    <h2 class="text-2xl font-bold mb-4">
+      Encontre seu especialista em cannabis medicinal
+    </h2>
 
-      <!-- Exibir Foto -->
-      {% if medico.foto_perfil %}
-      <img
-        src="{{ medico.foto_perfil }}"
-        alt="Foto de {{ medico.nome }}"
-        class="w-full h-40 object-cover rounded mb-4"
+    <!-- Barra de Pesquisa (sem botão de enviar) -->
+    <form action="/medicos/" method="get">
+      <input
+        type="text"
+        name="search"
+        placeholder="Digite o nome do médico"
+        class="px-4 py-2 border rounded-lg w-full md:w-1/2 mx-auto"
+        value="{{ request.GET.search }}"
       />
-      {% else %}
-      <p>Sem foto disponível</p>
-      {% endif %}
+    </form>
 
-      <!-- Exibir Preço -->
-      <p><strong>Preço:</strong> R$ {{ medico.preco }}</p>
-
-      <!-- Exibir Tempo de Consulta -->
-      <p><strong>Tempo de Consulta:</strong> {{ medico.tempo_consulta}}</p>
-
-      <a href="{% url 'perfil_medico' medico.id %}" class="text-blue-500"
-        >Ver Perfil</a
+    <!-- Filtro por Preço (Menor e Maior Valor) -->
+    <div class="my-4 text-center">
+      <span class="mr-2 text-lg font-semibold">Ordenar por Preço:</span>
+      <a
+        href="?sort=preco_asc&specialty={{ request.GET.specialty }}&search={{ request.GET.search }}"
+        class="px-4 py-2 bg-blue-500 text-white rounded-lg inline-block mb-2 mr-2 hover:bg-blue-600"
+        >Menor Valor</a
+      >
+      <a
+        href="?sort=preco_desc&specialty={{ request.GET.specialty }}&search={{ request.GET.search }}"
+        class="px-4 py-2 bg-blue-500 text-white rounded-lg inline-block mb-2 mr-2 hover:bg-blue-600"
+        >Maior Valor</a
       >
     </div>
-    {% endfor %}
+
+    <!-- Filtro por Especialidade (tags clicáveis) -->
+    <div class="my-4">
+
+      <!-- Tag "Todas" sempre visível -->
+      <a href="?specialty=all&preco_min={{ request.GET.preco_min }}&preco_max={{ request.GET.preco_max }}&search={{ request.GET.search }}"
+         class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300 inline-block mb-2 mr-2">
+        Todas
+      </a>
+
+      <!-- Outras especialidades, condicionalmente visíveis -->
+      {% if request.GET.specialty == 'all' %}
+        <!-- Se "Todas" foi clicado, mostra todas as especialidades -->
+        <div>
+          {% for especialidade in especialidades %}
+            <a href="?specialty={{ especialidade }}&preco_min={{ request.GET.preco_min }}&preco_max={{ request.GET.preco_max }}&search={{ request.GET.search }}"
+               class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300 inline-block mb-2 mr-2">
+              {{ especialidade }}
+            </a>
+          {% endfor %}
+        </div>
+      {% elif request.GET.specialty %}
+        <!-- Se uma especialidade foi escolhida, mostra a especialidade e "Todas" -->
+        <div>
+          <!-- Exibe apenas a especialidade escolhida -->
+          <a href="?specialty={{ request.GET.specialty }}&preco_min={{ request.GET.preco_min }}&preco_max={{ request.GET.preco_max }}&search={{ request.GET.search }}"
+             class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300 inline-block mb-2 mr-2">
+            {{ request.GET.specialty }}
+          </a>
+        </div>
+      {% else %}
+        <!-- Se nenhuma especialidade foi escolhida, mostra todas -->
+        <div>
+          {% for especialidade in especialidades %}
+            <a href="?specialty={{ especialidade }}&preco_min={{ request.GET.preco_min }}&preco_max={{ request.GET.preco_max }}&search={{ request.GET.search }}"
+               class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300 inline-block mb-2 mr-2">
+              {{ especialidade }}
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Exibição dos Médicos Filtrados -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+      {% for medico in medicos %}
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h2 class="font-semibold text-lg">{{ medico.nome }}</h2>
+          <p class="text-sm text-gray-600">{{ medico.especialidade }}</p>
+          <p class="text-sm text-gray-700"><strong>Preço:</strong> R$ {{ medico.preco }}</p>
+          <p class="text-sm text-gray-700"><strong>Tempo de Consulta:</strong> {{ medico.tempo_consulta }}</p>
+          <a href="{% url 'perfil_medico' medico.id %}" class="text-blue-500 hover:text-blue-600">Ver Perfil</a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}
