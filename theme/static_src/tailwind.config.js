@@ -15,14 +15,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-        fontFamily: {
-            custom: ['Marvin Visions Variable', 'sans-serif'],
-          },
+      fontFamily: {
+      },
       colors: {
         theme_color2: {
           400: "rgb(115 130 82 / var(--tw-text-opacity,1))",
           300: "rgb(167 200 121 / var(--tw-bg-opacity, 1))",
-          200: "rgb(205 234 152 / var(--tw-bg-opacity, 1))"
+          200: "rgb(205 234 152 / var(--tw-bg-opacity, 1))",
         },
       },
     },
@@ -38,4 +37,3 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
   ],
 };
-

@@ -1,12 +1,22 @@
 .avatar > div {
-    display: block;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .avatar img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
+
+@font-face {
+  font-family: "MarvinVisionsBig-Bold";
+  src: url("/static/fonts/MarvinVisionsBig-Bold.woff2") format("woff2"),
+    url("/static/fonts/MarvinVisionsBig-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
