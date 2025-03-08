@@ -13,6 +13,10 @@
       href="https://db.onlinewebfonts.com/c/2a2b767302dad0d292294c13d63a0c5f?family=DIN+2014"
       rel="stylesheet"
     />
+    <link
+      href="https://db.onlinewebfonts.com/c/34024de67e7902c685c4c771c10ec00e?family=Marvin+Visions+Bold"
+      rel="stylesheet"
+    />
     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
     {% tailwind_css %}
   </head>
@@ -334,7 +338,7 @@
             <div class="flex flex-col">
               <div
                 class="mb-4 text-2xl md:text-3xl"
-                style="font-family: 'MarvinVisionsBig-Bold', sans-serif"
+                style="font-family: 'Marvin Visions Bold', sans-serif"
               >
                 médicos
               </div>
@@ -352,7 +356,7 @@
             <div class="flex flex-col">
               <div
                 class="mb-4 text-2xl md:text-3xl"
-                style="font-family: 'MarvinVisionsBig-Bold', sans-serif"
+                style="font-family: 'Marvin Visions Bold', sans-serif"
               >
                 pacientes
               </div>
@@ -384,7 +388,7 @@
             <div class="flex flex-col">
               <div
                 class="mb-4 text-2xl md:text-3xl"
-                style="font-family: 'MarvinVisionsBig-Bold', sans-serif"
+                style="font-family: 'Marvin Visions Bold', sans-serif"
               >
                 marcas
               </div>
@@ -411,7 +415,7 @@
       <div class="md:mt-32">
         <div
           class="mb-8 text-2xl font-bold"
-          style="font-family: 'MarvinVisionsBig-Bold', sans-serif"
+          style="font-family: 'Marvin Visions Bold', sans-serif"
         >
           Nos siga nas redes sociais
         </div>
@@ -482,7 +486,7 @@
         </div>
         <div
           class="mb-3 text-2xl font-bold"
-          style="font-family: 'MarvinVisionsBig-Bold', sans-serif"
+          style="font-family: 'Marvin Visions Bold', sans-serif"
         >
           Fale conosco
         </div>
@@ -540,7 +544,7 @@
       <div>
         <div
           class="text-xs font-thin text-black md:text-base"
-          style="font-family: Marvin Visions Variable"
+          style="font-family: Marvin Visions Bold; font-weight: 100"
         >
           COPYRIGHT©KAYA <span id="actual_year">2025</span>. ALL RIGHTS RESERVED
         </div>
@@ -553,13 +557,17 @@
         />
       </div>
     </div>
-    <script>
-      document.getElementById("actual_year").innerText =
-        new Date().getFullYear();
-    </script>
+    
   </body>
 </html>
 
+<!-- Script para mudar o ano do copyright -->
+<script>
+  document.getElementById("actual_year").innerText =
+    new Date().getFullYear();
+</script>
+
+<!-- Script para a navbar mudar de cor ao rolar a pagina -->
 <script>
   function updateNavbarOpacity() {
     const navbar = document.querySelector("nav");
