@@ -121,5 +121,29 @@
     </nav>
 
     {% block content %}{% endblock %}
+
+    
   </body>
 </html>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('nav');
+    if (window.scrollY > 0) {
+      navbar.classList.add('opacity-70');
+    } else {
+      navbar.classList.remove('opacity-70');
+    }
+  });
+
+  document.querySelector('nav').addEventListener('click', function() {
+    this.classList.remove('opacity-70');
+  });
+
+  document.addEventListener('click', function(event) {
+    const navbar = document.querySelector('nav');
+    if (!navbar.contains(event.target)) {
+      navbar.classList.add('opacity-70');
+    }
+  });
+</script>
