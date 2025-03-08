@@ -5,7 +5,7 @@ def lista_medicos(request):
     # Pegando os filtros da URL
     search = request.GET.get('search', '')
     specialty = request.GET.get('specialty', '')
-    sort = request.GET.get('sort', '')  # Usando o parâmetro 'sort' para a ordenação
+    sort = request.GET.get('sort', '')
 
     # Filtrando os médicos
     medicos = Medico.objects.all()

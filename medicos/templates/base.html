@@ -9,10 +9,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="https://db.onlinewebfonts.com/c/2a2b767302dad0d292294c13d63a0c5f?family=DIN+2014" rel="stylesheet">
+    
     {% tailwind_css %}
     
   </head>
-  <body class="overflow-x-hidden">
+  <body class="overflow-x-hidden" style="font-family: 'DIN 2014', sans-serif;">
+
     <nav class="fixed z-50 flex justify-center w-full top-8 opacity-70">
       <div class="flex flex-wrap items-center w-full max-w-screen-xl p-4 bg-[#232323] mx-2.5 rounded-3xl md:mx-8 md:px-8">
         <a class="flex items-center space-x-3 rtl:space-x-reverse me-20" href="/">
@@ -122,19 +125,126 @@
 
     {% block content %}{% endblock %}
 
+    <footer class="text-white bg-theme_color1-600 flex flex-wrap md:mx-2.5 mt-8 rounded-3xl pt-10 md:text-2xl gap-8 md:px-10 px-4 pb-20">
+      <div class="flex flex-col gap-8 md:ps-12 xl:max-w-xs">
+          <div>
+              <img class="w-1/2 mx-auto lg:w-full" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20slogan%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250308%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250308T181726Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=34562c3c8fc7378a56b2edb0df844c8f9dc718f0a48250b641bb09041a8bff25" alt="Kaya slogan Dados, Conhecimento, Impacto">
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+              <div>
+                  <a href="/">
+                      <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20doc%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250308%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250308T181726Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b291956ab819cb85be8897f4215b02700d5e000e300dfc7aebe0126faa98a929" alt="Kaya doc">
+                  </a>
+              </div>
+              <div>
+                  <a href="https://kayabiz.com/?utm_source=Kaya_doc">
+                      <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20biz%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250308%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250308T181726Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8ff63ad108e175ae2972b046a2d6a87f95a61153c1e6cc3386d0952fa5ebe" alt="Kaya Biz">
+                  </a>
+              </div>
+              <div>
+                  <a href="https://kayamind.com/?utm_source=Kaya_doc">
+                      <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20mind%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250308%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250308T181726Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=d092e417efe88a29aada3534e4b221a041676fd76c753248ac75341a17b90e5a" alt="Kaya Mind">
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="flex justify-center mt-6 lg:col-span-2">
+          <div>
+              <div class="gap-8 md:mt-4 md:flex md:flex-wrap">
+                  <div class="flex flex-col">
+                      <div class="mb-4 text-2xl md:text-3xl" style="font-family: Marvin Visions Variable">médicos</div>
+                      <ul class="font-semibold">
+                          <li class="hover:font-bold hover:cursor-pointer">
+                              <a href="/cadastro_medico_form/">Funcionalidades do Kaya Doc</a>
+                          </li>
+                          <li class="hover:font-bold hover:cursor-pointer">
+                              <a href="/cadastro_medico_form/">FAQ</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="flex flex-col">
+                      <div class="mb-4 text-2xl md:text-3xl" style="font-family: Marvin Visions Variable">pacientes</div>
+                      <ul class="font-semibold">
+                          <li class="hover:font-bold hover:cursor-pointer">
+                              <a href="/sou_paciente/">Gostaria de me tornar <br> paciente</a>
+                          </li>
+                          <li class="my-3 hover:font-bold hover:cursor-pointer">
+                              <a class="px-8 py-2 text-sm rounded-2xl bg-theme_color2-200 text-theme_color2-400" href="https://api.whatsapp.com/send/?phone=5511912423799&amp;text=Quero+saber+mais+sobre+o+kaya+doc+gostaria+de+me+tornar+um+paciente.&amp;type=phone_number&amp;app_absent=0">Saiba mais</a>
+                          </li>
+                          <li class="hover:font-bold hover:cursor-pointer">
+                              <a href="/beneficios_lista/">Benefícios da cannabis</a>
+                          </li>
+                          <li class="hover:font-bold hover:cursor-pointer">
+                              <a href="/glossario_lista/">Glossário canábico</a>
+                          </li>
+                          <li class="hover:font-bold hover:cursor-pointer">
+                              <a href="/sou_paciente/">FAQ</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="flex flex-col">
+                      <div class="mb-4 text-2xl md:text-3xl" style="font-family: Marvin Visions Variable">marcas</div>
+                      <ul class="font-semibold">
+                          <li class="hover:font-bold hover:cursor-pointer">
+                              <a href="https://api.whatsapp.com/send/?phone=5511912423799&amp;text=Sou+uma+marca+quero+e+estar+no+Kaya+Doc.&amp;type=phone_number&amp;app_absent=0">Sou marca e quero <br> estar no Kaya Doc</a>
+                          </li>
+                          <li class="my-4 hover:font-bold hover:cursor-pointer">
+                              <a class="px-8 py-2 text-sm rounded-2xl bg-theme_color2-200 text-theme_color2-400" href="https://api.whatsapp.com/send/?phone=5511912423799&amp;text=Sou+uma+marca+quero+saber+sobre+o+kaya+doc.&amp;type=phone_number&amp;app_absent=0">Saiba mais</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="md:mt-32">
+          <div class="mb-8 text-2xl font-bold" style="font-family: Marvin Visions Variable">Nos siga nas redes sociais</div>
+          <div class="flex gap-4 mb-10">
+              <div>
+                  <a href="https://www.linkedin.com/company/kaya-mind/" target="_blank">
+                      <svg class="svg-inline--fa fa-linkedin-in items-center p-3 text-black rounded-full md:text-4xl bg-theme_color2-200" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg><!-- <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-linkedin-in bg-theme_color2-200"></i> Font Awesome fontawesome.com -->
+                  </a>
+              </div>
+              <div>
+                  <a href="https://www.instagram.com/kaya.mind/" target="_blank">
+                      <svg class="svg-inline--fa fa-instagram items-center p-3 text-black rounded-full md:text-4xl bg-theme_color2-200" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-instagram bg-theme_color2-200"></i> Font Awesome fontawesome.com -->
+                  </a>
+              </div>
+              <div>
+                  <a href="https://www.youtube.com/@kayamind" target="_blank">
+                      <svg class="svg-inline--fa fa-youtube items-center p-3 text-black rounded-full md:text-4xl bg-theme_color2-200" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg><!-- <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-youtube bg-theme_color2-200"></i> Font Awesome fontawesome.com -->
+                  </a>
+              </div>
+          </div>
+          <div class="mb-3 text-2xl font-bold" style="font-family: Marvin Visions Variable">Fale conosco</div>
+          <div>
+              <ul class="space-y-3">
+                  <li class="flex items-center gap-4">
+                      <svg class="svg-inline--fa fa-phone text-2xl text-theme_color2-200" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg><!-- <i class="text-2xl fas fa-phone text-theme_color2-200"></i> Font Awesome fontawesome.com --> <a href="tel:+55 11 91242-3799" class="hover:underline">+55 11 91242-3799</a>
+                  </li>
+                  <li class="flex items-center gap-4">
+                      <svg class="svg-inline--fa fa-envelope text-2xl text-theme_color2-200" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></svg><!-- <i class="text-2xl fas fa-envelope text-theme_color2-200"></i> Font Awesome fontawesome.com --> <a href="mail:atendimento@kayadoc.com" class="hover:underline">atendimento@kayadoc.com</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+
     
   </body>
 </html>
 
 <script>
-  window.addEventListener('scroll', function() {
+  function updateNavbarOpacity() {
     const navbar = document.querySelector('nav');
     if (window.scrollY > 0) {
       navbar.classList.add('opacity-70');
     } else {
       navbar.classList.remove('opacity-70');
     }
-  });
+  }
+
+  document.addEventListener('DOMContentLoaded', updateNavbarOpacity);
+  window.addEventListener('scroll', updateNavbarOpacity);
 
   document.querySelector('nav').addEventListener('click', function() {
     this.classList.remove('opacity-70');
@@ -147,3 +257,4 @@
     }
   });
 </script>
+

@@ -1,9 +1,7 @@
 module.exports = {
   content: [
     "../templates/**/*.html",
-
     "../../templates/**/*.html",
-
     "../../**/templates/**/*.html",
   ],
   theme: {
@@ -15,6 +13,9 @@ module.exports = {
           300: "rgb(167 200 121 / var(--tw-bg-opacity, 1))",
           200: "rgb(205 234 152 / var(--tw-bg-opacity, 1))",
           100: "rgb(224 244 179 / var(--tw-bg-opacity,1))",
+        },
+        bg_theme_color1: {
+          600: "rgb(35 35 35 / var(--tw-bg-opacity, 1))",
         },
       },
     },

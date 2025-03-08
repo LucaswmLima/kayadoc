@@ -41,9 +41,11 @@
           </form>
         </div>
 
+        <!-- Total de medicos encontrados -->
+        <div class="mb-8 font-bold text-start ms-10 text-theme_color2-300">Total de 20 prescritores</div>
+
         <!-- Filtro por Preço -->
         <div class="my-4 text-center">
-          <span class="mr-2 text-lg font-semibold">Ordenar por Preço:</span>
           <a href="?sort=preco_asc&specialty={{ request.GET.specialty }}&search={{ request.GET.search }}" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">Menor Valor</a>
           <a href="?sort=preco_desc&specialty={{ request.GET.specialty }}&search={{ request.GET.search }}" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">Maior Valor</a>
         </div>
