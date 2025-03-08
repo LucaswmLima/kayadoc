@@ -4,7 +4,7 @@ class Medico(models.Model):
     nome = models.CharField(max_length=100)
     especialidade = models.CharField(max_length=50)
     preco = models.DecimalField(max_digits=6, decimal_places=2)
-    tempo_consulta = models.DurationField()
+    tempo_consulta = models.IntegerField()
     foto_perfil = models.ImageField(upload_to='fotos_medicos/')
 
     def __str__(self):

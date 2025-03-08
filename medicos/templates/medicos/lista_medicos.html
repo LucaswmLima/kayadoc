@@ -46,9 +46,29 @@
         <div class="mb-8 font-bold text-start ms-10 text-theme_color2-300">Total de 20 prescritores</div>
 
         <!-- Filtro por Preço -->
-        <div class="my-4 text-center">
-          <a href="?sort=preco_asc&specialty={{ request.GET.specialty }}&search={{ request.GET.search }}" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">Menor Valor</a>
-          <a href="?sort=preco_desc&specialty={{ request.GET.specialty }}&search={{ request.GET.search }}" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">Maior Valor</a>
+        <div class="">
+          <div class="flex gap-6 mb-5 text-gray-500">
+            <div class="text-xl font-bold">Filtros</div>
+            <div><svg class="svg-inline--fa fa-filter text-2xl" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"></path></svg><!-- <i class="text-2xl fas fa-filter"></i> Font Awesome fontawesome.com --></div>
+        </div>
+        <div class="flex gap-5">
+          <!-- Menor Valor -->
+          <div class="flex items-center">
+              <input type="radio" id="preco_asc" name="sort" value="preco_asc" {% if request.GET.sort == 'preco_asc' %} checked {% endif %} class="hidden peer" onchange="this.form.submit()">
+              <label for="preco_asc" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">
+                  MENOR VALOR
+              </label>
+          </div>
+      
+          <!-- Maior Valor -->
+          <div class="flex items-center">
+              <input type="radio" id="preco_desc" name="sort" value="preco_desc" {% if request.GET.sort == 'preco_desc' %} checked {% endif %} class="hidden peer" onchange="this.form.submit()">
+              <label for="preco_desc" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">
+                  MAIOR VALOR
+              </label>
+          </div>
+      </div>
+               
         </div>
             
           </form>
