@@ -1648,6 +1648,10 @@ select {
   background-color: rgb(115 130 82 / var(--tw-text-opacity,1));
 }
 
+.peer:checked ~ .peer-checked\:bg-theme_color2-300 {
+  background-color: rgb(167 200 121 / var(--tw-bg-opacity, 1));
+}
+
 .peer:checked ~ .peer-checked\:text-theme_color2-400 {
   color: rgb(115 130 82 / var(--tw-text-opacity,1));
 }

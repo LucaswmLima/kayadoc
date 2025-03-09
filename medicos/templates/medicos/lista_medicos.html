@@ -21,12 +21,12 @@
               <div class="flex flex-wrap justify-center gap-6 mb-8">
                 <div class="flex items-center">
                   <input type="radio" id="all" name="specialty" value="all" {% if request.GET.specialty == 'all' %} checked {% endif %} class="hidden peer" onchange="this.form.submit()">
-                  <label for="all" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-400">Todas</label>
+                  <label for="all" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-300">Todas</label>
                 </div>
                 {% for especialidade in especialidades %}
                   <div class="flex items-center specialty-option">
                     <input type="radio" id="{{ especialidade }}" name="specialty" value="{{ especialidade }}" {% if request.GET.specialty == especialidade %} checked {% endif %} class="hidden peer" onchange="this.form.submit()">
-                    <label for="{{ especialidade }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-400">{{ especialidade }}</label>
+                    <label for="{{ especialidade }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-300">{{ especialidade }}</label>
                   </div>
                 {% endfor %}
               </div>
