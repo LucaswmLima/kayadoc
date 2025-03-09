@@ -20,8 +20,8 @@ def lista_medicos(request):
         medicos = medicos.order_by('preco')
     elif sort == 'preco_desc':
         medicos = medicos.order_by('-preco')
-    elif sort == 'views':
-        medicos - medicos.order_by('views')
+    elif sort == 'views_desc':
+        medicos = medicos.order_by('views')
 
 
     # Obtendo as especialidades distintas
