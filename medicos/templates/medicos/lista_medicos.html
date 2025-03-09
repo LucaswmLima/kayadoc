@@ -24,26 +24,26 @@
                   <label for="all" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-400">Todas</label>
                 </div>
                 {% for especialidade in especialidades %}
-                <div class="flex items-center specialty-option">
-                  <input type="radio" id="{{ especialidade }}" name="specialty" value="{{ especialidade }}" {% if request.GET.specialty == especialidade %} checked {% endif %} class="hidden peer" onchange="filterSpecialty(this)">
-                  <label for="{{ especialidade }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-400">{{ especialidade }}</label>
-                </div>
-                {% endfor %}
+    <div class="flex items-center specialty-option">
+        <input type="radio" id="{{ especialidade }}" name="specialty" value="{{ especialidade }}" {% if request.GET.specialty == especialidade %} checked {% endif %} class="hidden peer" onchange="this.form.submit()">
+        <label for="{{ especialidade }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-400">{{ especialidade }}</label>
+    </div>
+{% endfor %}
               </div>
             </div>
 
             <!-- Barra de Pesquisa -->
             <div class="relative mb-4">
-              <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-3">
-                <svg class="w-5 h-5 text-gray-500" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+              <div class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-2 md:ps-6">
+                <svg class="svg-inline--fa fa-magnifying-glass text-gray-500" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
                   <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
                 </svg>
               </div>
-              <input type="text" name="search" placeholder="Digite o nome ou palavra-chave" class="block w-full text-sm text-gray-900 bg-gray-100 border-0 rounded-lg shadow-lg md:py-5 md:px-12 md:rounded-full pl-10 focus:ring-blue-500 focus:border-blue-500" value="{{ request.GET.search }}">
+              <input type="text" name="search" placeholder="" class="block w-full text-sm text-gray-900 bg-gray-100 border-0 rounded-lg shadow-lg md:py-5 md:px-12 md:rounded-full pl-10 focus:ring-blue-500 focus:border-blue-500" value="{{ request.GET.search }}">
             </div>
 
             <!-- Total de medicos encontrados -->
-        <div class="mb-8 font-bold text-start ms-10 text-theme_color2-300">Total de 20 prescritores</div>
+        <div class="mb-8 font-bold text-start ms-10 text-theme_color2-300">Total de {{ total_medicos }} prescritores</div>
 
         <!-- Filtro por Preço -->
         <div class="">
@@ -119,27 +119,33 @@
 </main>
 
 <script>
-  // Função para filtrar as especialidades
-  function filterSpecialty(radioButton) {
-    const selectedValue = radioButton.value;
-    const specialtyOptions = document.querySelectorAll('.specialty-option');
+  document.addEventListener('DOMContentLoaded', function() {
+    // Função para filtrar as especialidades com base na seleção do filtro
+    function filterSpecialty() {
+      const selectedValue = new URLSearchParams(window.location.search).get('specialty');
+      const specialtyOptions = document.querySelectorAll('.specialty-option');
 
-    if (selectedValue !== 'all') {
-      specialtyOptions.forEach(option => {
-        // Esconde as opções que não são a selecionada
-        if (option.querySelector('input').value !== selectedValue) {
-          option.style.display = 'none';
-        } else {
+      if (selectedValue && selectedValue !== 'all') {
+        specialtyOptions.forEach(option => {
+          // Esconde as opções que não são a selecionada
+          if (option.querySelector('input').value !== selectedValue) {
+            option.style.display = 'none';
+          } else {
+            option.style.display = 'inline-flex';
+          }
+        });
+      } else {
+        // Se "Todas" for selecionado, mostra todas as opções
+        specialtyOptions.forEach(option => {
           option.style.display = 'inline-flex';
-        }
-      });
-    } else {
-      // Se "Todas" for selecionado, mostra todas as opções
-      specialtyOptions.forEach(option => {
-        option.style.display = 'inline-flex';
-      });
+        });
+      }
     }
-  }
+
+    // Chama a função para aplicar o filtro após o carregamento da página
+    filterSpecialty();
+  });
 </script>
+
 
 {% endblock %}

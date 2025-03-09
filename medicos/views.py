@@ -32,6 +32,7 @@ def lista_medicos(request):
         'especialidades': especialidades,
         'search': search,
         'specialty': specialty,
+        'total_medicos': medicos.count()
     })
 
 
