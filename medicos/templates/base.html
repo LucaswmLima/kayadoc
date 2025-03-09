@@ -21,6 +21,8 @@
     {% tailwind_css %}
   </head>
   <body class="overflow-x-hidden" style="font-family: 'DIN 2014', sans-serif">
+
+    <!-- Navbar -->
     <nav class="fixed z-50 flex justify-center w-full top-8 opacity-70">
       <div
         class="flex flex-wrap items-center w-full max-w-screen-xl p-4 bg-[#232323] mx-2.5 rounded-3xl md:mx-8 md:px-8"
@@ -86,7 +88,7 @@
                     fill="currentColor"
                     d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
                   ></path></svg
-                ><!-- <i class="fas fa-caret-down ms-4"></i> Font Awesome fontawesome.com -->
+                >
               </button>
               <!-- Dropdown menu -->
               <div
@@ -201,9 +203,11 @@
                     fill="currentColor"
                     d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
                   ></path></svg
-                ><!-- <i class="fas fa-caret-down ms-4"></i> Font Awesome fontawesome.com -->
+                >
               </button>
               <!-- Dropdown menu -->
+               <!-- Script para os dropdown-->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
               <div
                 id="dropdownNavbar2"
                 class="z-10 hidden font-normal bg-[#232323] rounded-lg shadow-sm w-44"
@@ -294,6 +298,7 @@
 
     {% block content %}{% endblock %}
 
+    <!-- Footer -->
     <footer
       class="text-white bg-theme_color1-600 flex flex-wrap md:mx-2.5 mt-8 rounded-3xl pt-10 md:text-2xl gap-8 md:px-10 px-4 pb-20"
     >
@@ -538,6 +543,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Barra de Copyright-->
     <div
       class="flex justify-between px-8 py-5 -mt-10 bg-white md:px-20 rounded-t-2xl col-span-full md:mx-2.5"
     >
@@ -557,6 +564,7 @@
         />
       </div>
     </div>
+
     
   </body>
 </html>
