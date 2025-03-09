@@ -1396,6 +1396,10 @@ select {
   color: rgb(115 130 82 / var(--tw-text-opacity,1));
 }
 
+.text-theme_color2-600 {
+  color: rgb(103 106 98 / var(--tw-text-opacity,1));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -1433,12 +1437,20 @@ select {
   background-color: rgb(167 200 121 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-theme_color2-600:hover {
+  background-color: rgb(103 106 98 / var(--tw-text-opacity,1));
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
 
 .hover\:text-theme_color2-100:hover {
   color: rgb(224 244 179 / var(--tw-bg-opacity,1));
+}
+
+.hover\:text-theme_color2-600:hover {
+  color: rgb(103 106 98 / var(--tw-text-opacity,1));
 }
 
 .hover\:underline:hover {

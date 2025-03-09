@@ -12,6 +12,7 @@ module.exports = {
           600: "rgb(35 35 35 / var(--tw-bg-opacity, 1))",
         },
         theme_color2: {
+          600: "rgb(103 106 98 / var(--tw-text-opacity,1))",
           400: "rgb(115 130 82 / var(--tw-text-opacity,1))",
           300: "rgb(167 200 121 / var(--tw-bg-opacity, 1))",
           200: "rgb(205 234 152 / var(--tw-bg-opacity, 1))",
