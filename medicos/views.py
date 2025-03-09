@@ -2,13 +2,13 @@ from django.shortcuts import render, get_object_or_404
 from .models import Medico
 
 def lista_medicos(request):
-    # Pegando os filtros da URL
+    # Filtros da URL
     search = request.GET.get('search', '')
     specialty = request.GET.get('specialty', '')
     sort = request.GET.get('sort', '')
 
-    # Filtrando os médicos
-    medicos = Medico.objects.all()
+    # Filtra os médicos, carrega apenas campos essenciais para poupar desempenho
+    medicos = Medico.objects.only('id', 'nome', 'especialidade', 'preco', 'tempo_consulta', 'foto_perfil','views')
 
     if search:
         medicos = medicos.filter(nome__icontains=search)
@@ -16,13 +16,15 @@ def lista_medicos(request):
     if specialty and specialty != 'all':
         medicos = medicos.filter(especialidade=specialty)
 
-    # Ordenação por preço
     if sort == 'preco_asc':
         medicos = medicos.order_by('preco')
     elif sort == 'preco_desc':
         medicos = medicos.order_by('-preco')
+    elif sort == 'views':
+        medicos - medicos.order_by('views')
 
-    # Obtendo as especialidades de forma distinta
+
+    # Obtendo as especialidades distintas
     especialidades = Medico.objects.values_list('especialidade', flat=True).distinct()
 
     return render(request, 'medicos/lista_medicos.html', {
@@ -34,5 +36,7 @@ def lista_medicos(request):
 
 
 def perfil_medico(request, id):
-    medico = get_object_or_404(Medico, id=id)
+    # Todos os detalhes do medico
+    medico = get_object_or_404(Medico.objects.prefetch_related('formacoes'), id=id)
     return render(request, 'medicos/perfil_medico.html', {'medico': medico})
+

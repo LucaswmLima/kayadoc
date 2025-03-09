@@ -67,6 +67,13 @@
                   MAIOR VALOR
               </label>
           </div>
+          <!-- Maior Valor -->
+          <div class="flex items-center">
+            <input type="radio" id="preco_desc" name="sort" value="preco_desc" {% if request.GET.sort == 'preco_desc' %} checked {% endif %} class="hidden peer" onchange="this.form.submit()">
+            <label for="preco_desc" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">
+                MAIOR VALOR
+            </label>
+        </div>
       </div>
                
         </div>
