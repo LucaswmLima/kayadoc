@@ -1852,6 +1852,11 @@ select {
     margin-right: 3rem;
   }
 
+  .xl\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .xl\:mb-32 {
     margin-bottom: 8rem;
   }

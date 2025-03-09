@@ -82,7 +82,10 @@
         </div>        
 
         <!-- Exibição dos Médicos Filtrados -->
-        <div class="grid grid-cols-1 gap-6 pb-6 mx-6 overflow-x-auto md:mx-12 sm:grid-cols-2 md:grid-cols-3 xl:px-9 snap-x xl:gap-4 lg:mb-16 xl:max-w-screen-xl">
+         <div class="medic-list-container">
+
+         
+        <div class="grid grid-cols-1 gap-6 pb-6 mx-6 overflow-x-auto md:mx-12 sm:grid-cols-2 md:grid-cols-3 xl:px-9 snap-x xl:gap-4 lg:mb-16 xl:max-w-screen-xl xl:mx-auto">
           {% for medico in medicos %}
           <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
             <div class="flex flex-col w-full">
@@ -113,6 +116,7 @@
           </div>
           {% endfor %}
         </div>
+      </div>
       </div>
     </div>
   </section>
