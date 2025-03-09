@@ -8,9 +8,11 @@
       </div>
       <div class="sticky z-10 pt-24">
           <div class="flex gap-8 px-12">
+            <div class="overflow-hidden rounded-full w-52 h-52 ring-white ring-2">
               <div class="overflow-hidden rounded-full w-52 h-52 ring-white ring-2">
-                  <img src="{{ medico.foto_perfil }}" alt="Foto de perfil de {{ medico.nome }}" class="object-cover w-full h-full">
-              </div>
+                <img src="{{ MEDIA_URL }}/medicos/{{ medico.foto_perfil }}" alt="Foto de perfil de {{ medico.nome }}" class="object-cover w-full h-full">
+            </div>
+          </div>
               <div class="mt-28">
                   <h1 class="mb-3 text-4xl font-bold">{{ medico.nome }}</h1>
                   <div class="mb-3 text-gray-500">
