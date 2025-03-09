@@ -28,7 +28,7 @@
                     <input type="radio" id="{{ especialidade }}" name="specialty" value="{{ especialidade }}" {% if request.GET.specialty == especialidade %} checked {% endif %} class="hidden peer" onchange="this.form.submit()">
                     <label for="{{ especialidade }}" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 hover:bg-theme_color2-300 peer-checked:bg-theme_color2-400">{{ especialidade }}</label>
                   </div>
-                {% endfor %}a
+                {% endfor %}
               </div>
             </div>
 
@@ -71,7 +71,7 @@
           <div class="flex items-center">
             <input type="radio" id="views_desc" name="sort" value="views_desc" {% if request.GET.sort == 'views_desc' %} checked {% endif %} class="hidden peer" onchange="this.form.submit()">
             <label for="views_desc" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">
-                VIEWS
+              VISUALIZAÇÕES
             </label>
         </div>
       </div>
@@ -83,8 +83,6 @@
 
         <!-- Exibição dos Médicos Filtrados -->
          <div class="medic-list-container">
-
-         
         <div class="grid grid-cols-1 gap-6 pb-6 mx-6 overflow-x-auto md:mx-12 sm:grid-cols-2 md:grid-cols-3 xl:px-9 snap-x xl:gap-4 lg:mb-16 xl:max-w-screen-xl xl:mx-auto">
           {% for medico in medicos %}
           <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
