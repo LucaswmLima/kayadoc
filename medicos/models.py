@@ -29,7 +29,6 @@ class Formacao(models.Model):
     medico = models.ForeignKey(Medico, related_name="formacoes", on_delete=models.CASCADE)
     faculdade_nome = models.CharField(max_length=255)
     curso_nome = models.CharField(max_length=255)
-    data_conclusao = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.faculdade_nome} - {self.curso_nome}"
