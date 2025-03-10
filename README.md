@@ -39,6 +39,9 @@
       <ul>
         <li><a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a></li>
       </ul>
+      <ul>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+      </ul>
     </li>
     <li>
       <a href="#utilização">Utilização</a>
@@ -75,16 +78,16 @@
 ## Funcionalidades
 
 ### Filtros Dinâmicos
-Os usuários podem filtrar a lista de médicos por especialidade, preço e avaliações, tornando a busca mais personalizada.
+* Os usuários podem filtrar a lista de médicos por especialidade, preço e avaliações, tornando a busca mais personalizada.
 
 ### Pesquisa Avançada
-É possível pesquisar por tags, faixa de preço e visualizações, facilitando a busca por médicos que atendem critérios específicos.
+* É possível pesquisar por tags, faixa de preço e visualizações, facilitando a busca por médicos que atendem critérios específicos.
 
 ### Lista de Médicos Atualizada
-A lista é alimentada por um banco de dados SQLite, garantindo dados sempre atualizados.
+* A lista é alimentada por um banco de dados SQLite, garantindo dados sempre atualizados.
 
 ### Página de Médico Personalizada
-Cada página de médico exibe informações dinâmicas, como foto de perfil, foto de fundo, descrições e avaliações (estrelas e visualizações), todas atualizáveis em tempo real.
+* Cada página de médico exibe informações dinâmicas, como foto de perfil, foto de fundo, descrições e avaliações (estrelas e visualizações), todas atualizáveis em tempo real.
 
 <!-- GETTING STARTED -->
 ## Como rodar o projeto
