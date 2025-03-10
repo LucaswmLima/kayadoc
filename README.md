@@ -78,13 +78,13 @@
 ## Funcionalidades
 
 ### Filtros Dinâmicos
-* Os usuários podem filtrar a lista de médicos por especialidade, preço e avaliações, tornando a busca mais personalizada.
+* Permite que os usuários filtrem a lista de médicos por especialidade, preço e avaliações, proporcionando uma busca personalizada.
 
 ### Pesquisa Avançada
-* É possível pesquisar por tags, faixa de preço e visualizações, facilitando a busca por médicos que atendem critérios específicos.
+* Os usuários podem pesquisar médicos por tags, faixa de preço e visualizações, ajudando a encontrar resultados mais específicos.
 
 ### Lista de Médicos Atualizada
-* A lista é alimentada por um banco de dados SQLite, garantindo dados sempre atualizados.
+* A lista de médicos é alimentada por um banco de dados SQLite, garantindo que os dados estejam sempre atualizados.
 
 ### Página de Médico Personalizada
 * Cada página de médico exibe informações dinâmicas, como foto de perfil, foto de fundo, descrições e avaliações (estrelas e visualizações), todas atualizáveis em tempo real.
