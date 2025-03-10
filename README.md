@@ -58,7 +58,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
-![12](https://github.com/user-attachments/assets/f1ec9437-6a98-462c-9444-f3381461eeb1)
+![](https://github.com/user-attachments/assets/f1ec9437-6a98-462c-9444-f3381461eeb1)
 
 <p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
