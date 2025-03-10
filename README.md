@@ -1,4 +1,4 @@
-﻿# KayaDoc - Django + Tailwind
+﻿# Clone KayaDoc - Django + Tailwind
 
 Este projeto é uma réplica das páginas do Kaya Doc usando Django e TailwindCSS.
 
