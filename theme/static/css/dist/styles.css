@@ -824,16 +824,12 @@ select {
   bottom: 0px;
 }
 
-.left-0 {
-  left: 0px;
+.start-0 {
+  inset-inline-start: 0px;
 }
 
 .top-8 {
   top: 2rem;
-}
-
-.start-0 {
-  inset-inline-start: 0px;
 }
 
 .z-0 {
@@ -1310,6 +1306,11 @@ select {
      object-fit: fill;
 }
 
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1379,8 +1380,8 @@ select {
   padding-left: 2.5rem;
 }
 
-.pl-3 {
-  padding-left: 0.75rem;
+.ps-2 {
+  padding-inline-start: 0.5rem;
 }
 
 .pt-10 {
@@ -1393,10 +1394,6 @@ select {
 
 .pt-7 {
   padding-top: 1.75rem;
-}
-
-.ps-2 {
-  padding-inline-start: 0.5rem;
 }
 
 .text-center {
@@ -1642,10 +1639,6 @@ select {
 
 .peer:checked ~ .peer-checked\:bg-theme_color2-200 {
   background-color: rgb(205 234 152 / var(--tw-bg-opacity, 1));
-}
-
-.peer:checked ~ .peer-checked\:bg-theme_color2-400 {
-  background-color: rgb(115 130 82 / var(--tw-text-opacity,1));
 }
 
 .peer:checked ~ .peer-checked\:bg-theme_color2-300 {

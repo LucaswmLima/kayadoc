@@ -6,9 +6,10 @@ class Medico(models.Model):
     especialidade = models.CharField(max_length=50)
     preco = models.DecimalField(max_digits=6, decimal_places=2)
     tempo_consulta = models.IntegerField()
-    foto_perfil = models.ImageField(upload_to='fotos_medicos/')
+    foto_perfil = models.ImageField(upload_to='fotos_medicos/', default="")
 
     # Campos da pagina do medico
+    foto_fundo = models.ImageField(upload_to='fundos_medicos/', default="")
     crm = models.CharField(max_length=20, default="")
     residencia = models.TextField(default="")
     descricao = models.TextField(default="")

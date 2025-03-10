@@ -1,18 +1,22 @@
 {% extends "base.html" %} {% block content %}
 <main class="max-w-screen-xl mx-8 mt-32 2xl:mx-auto">
   <div class="relative">
-      <div class="absolute z-0 object-fill w-full h-48 bg-theme_color2-100 rounded-t-3xl">
-          
-              <div class="w-full h-full bg-theme_color2-200"></div>
-          
-      </div>
+    <!-- Foto fundo -->
+    <div class="absolute z-0 object-fill w-full h-48 bg-theme_color2-100 rounded-t-3xl">       
+        {% if medico.foto_fundo %}
+        <img src="{{ MEDIA_URL }}/medicos/{{ medico.foto_fundo }}" alt="Banner" 
+            class="object-cover object-center w-full h-full rounded-lg">
+        {% endif %}
+    </div>
       <div class="sticky z-10 pt-24">
           <div class="flex gap-8 px-12">
+            <!-- Foto Medico -->
             <div class="overflow-hidden rounded-full w-52 h-52 ring-white ring-2">
               <div class="overflow-hidden rounded-full w-52 h-52 ring-white ring-2">
                 <img src="{{ MEDIA_URL }}/medicos/{{ medico.foto_perfil }}" alt="Foto de perfil de {{ medico.nome }}" class="object-cover w-full h-full">
             </div>
-          </div>
+            </div>
+            <!-- Resumo do medico -->
               <div class="mt-28">
                   <h1 class="mb-3 text-4xl font-bold">{{ medico.nome }}</h1>
                   <div class="mb-3 text-gray-500">
