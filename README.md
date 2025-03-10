@@ -64,8 +64,10 @@
 
 
 ### Tecnologias Utilizadas
-* [![python][python.js]][python-url]
-* 
+* [![Python][Python]][Python-url]
+* [![Django][Django]][Django-url]
+* [![Sqlite][Sqlite]][Sqlite-url]
+* [![Docker][Docker]][Docker-url]
 
 <p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
@@ -159,7 +161,7 @@ Se você preferir rodar usando Docker, siga esses passos:
 - [x] Testar as páginas no Docker
 
       
-See the [open issues](https://github.com/lucaswmlima/kayadoc/issues) for a full list of proposed features (and known issues).
+Veja [open issues](https://github.com/lucaswmlima/kayadoc/issues) para uma lista completa de funcionalidades propostas (e problemas conhecidos).
 
 <p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
@@ -203,45 +205,17 @@ Lucas William Martins Lima - lucaswilliamml@gmail.com - [LinkedIn][linkedin-url]
 [linkedin-url]: https://linkedin.com/in/https://www.linkedin.com/in/lucaswmlima/
 [portfolio-url]: https://portfolio-lucaswilliam.vercel.app/#projects
 [product-screenshot]: https://raw.githubusercontent.com/LucaswmLima/kayadoc/main/assets/1.png
-[HTML]: https://img.shields.io/badge/HTML-E44D26?style=for-the-badge&logo=html5&logoColor=white
-[HTML-url]: https://developer.mozilla.org/pt-BR/docs/Web/HTML
-[CSS]: https://img.shields.io/badge/CSS-2862E9?style=for-the-badge&logo=css3&logoColor=white
-[CSS-url]: https://developer.mozilla.org/pt-BR/docs/Web/CSS
-[Javascript]: https://img.shields.io/badge/Javascript-E8D44D?style=for-the-badge&logo=javascript&logoColor=black
-[Javascript-url]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
-[Typescript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square
-[Typescript-url]: https://www.typescriptlang.org
-[Axios]: https://img.shields.io/badge/axios.js-854195?style=for-the-badge&logo=axios&logoColor=5A29E4
-[Axios-url]: https://axios-http.com/ptbr/docs/intro
-[node.js]: https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white
-[node.js-url]: https://nodejs.org/pt
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React.js-url]: https://reactjs.org/
-[Redux]: https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white
-[Redux-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://redux.js.org
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
 [Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Python-url]: https://www.python.org
-[Pandas]: https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white
-[Pandas-url]: https://pandas.pydata.org
-[NumPy]: https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white
-[NumPy-url]: https://numpy.org
-[Matplotlib]: https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black
-[Matplotlib-url]: https://matplotlib.org
-[Scikit-Learn]: https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white
-[Scikit-Learn-url]: scikit-learn.org
-[Selenium]: https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white
-[Selenium-url]: https://www.selenium.dev
+[Django]: https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green
+[Django-url]: https://www.djangoproject.com
+[Tailwindcss]: https://img.shields.io/badge/Tailwind_CSS-grey?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC
+[Tailwindcss-url]: https://tailwindcss.com
+[Sqlite]: https://img.shields.io/badge/SQLite-07405E?style=flat&compact=true&logo=sqlite&logoColor=white
+[Sqlite-url]: https://www.sqlite.org
+[Docker]: https://img.shields.io/badge/docker-257bd6?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com
+
+
+
+
