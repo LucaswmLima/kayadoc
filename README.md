@@ -61,6 +61,8 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
+O Kayadoc Clone é um projeto com intuito de replicar a plataforma de agendamento médico da KayaDoc. Desenvolvido com Python, Django, Tailwind CSS, SQLite e Docker, o sistema inclui filtros dinâmicos, pesquisa avançada por tags, preço e avaliações, e oferece uma interface personalizada para cada médico. O projeto foi criado para atender aos requisitos funcionais e extras, com foco em organização e boas práticas de desenvolvimento.
+
 ![](https://github.com/user-attachments/assets/f1ec9437-6a98-462c-9444-f3381461eeb1)
 
 <p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
