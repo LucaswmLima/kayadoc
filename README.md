@@ -18,13 +18,13 @@
   <p align="center">
     Este projeto é uma réplica das páginas do KayaDoc usando Django e TailwindCSS.
     <br />
-    <a href="https://github.com/lucaswmlima/meter-read-managment-tool"><strong>Explore a documentação »</strong></a>
+    <a href="https://github.com/lucaswmlima/kayadoc"><strong>Explore a documentação »</strong></a>
     <br />
     <br />
     ·
-    <a href="https://github.com/lucaswmlima/meter-read-managment-tool/issues">Reportar Bug</a>
+    <a href="https://github.com/lucaswmlima/kayadoc/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/lucaswmlima/meter-read-managment-tool/issues">Solicitar Recurso</a>
+    <a href="https://github.com/lucaswmlima/kayadoc/issues">Solicitar Recurso</a>
   </p>
 </div>
 
@@ -35,22 +35,21 @@
   <summary>Índice</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o Projeto</a>
+      <a href="#sobre-o-projeto">Sobre o Projeto</a>
       <ul>
-        <li><a href="#built-with">Tecnologias Utilizadas</a></li>
+        <li><a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Como rodar o projeto</a>
+      <a href="#utilização">Utilização</a>
       <ul>
-        <li><a href="#prerequisites">Pré-requisitos</a></li>
-        <li><a href="#installation">Como rodar o projeto</a></li>
+        <li><a href="#Como rodar o projeto">Como rodar o projeto</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contribuindo</a></li>
-    <li><a href="#license">Licença</a></li>
-    <li><a href="#contact">Contato</a></li>
+    <li><a href="#contribuindo">Contribuindo</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#contato">Contato</a></li>
   </ol>
 </details>
 
@@ -65,10 +64,8 @@
 
 
 ### Tecnologias Utilizadas
-* [![node.js][Node.js]][Node.js-url]
-* [![Typescript][Typescript]][Typescript-url]
-* [![React.js][React.js]][React.js-url]
-* [![Axios][Axios]][Axios-url]
+* [![python][python.js]][python-url]
+* 
 
 <p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
@@ -139,7 +136,7 @@ Se você preferir rodar usando Docker, siga esses passos:
    docker-compose exec web bash
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
 
 
@@ -162,62 +159,50 @@ Se você preferir rodar usando Docker, siga esses passos:
 - [x] Testar as páginas no Docker
 
       
-See the [open issues](https://github.com/lucaswmlima/meter-read-managment-tool/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/lucaswmlima/kayadoc/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contribuindo
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+As contribuições são o que fazem a comunidade open source ser um lugar tão incrível para aprender, inspirar e criar. Quaisquer contribuições que você fizer serão muito apreciadas.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Se você tiver uma sugestão que possa melhorar este projeto, por favor, faça um fork do repositório e crie um pull request. Você também pode simplesmente abrir uma issue com a tag "enhancement" (melhoria). Não se esqueça de dar uma estrela ao projeto! Agradecemos novamente!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Faça o Fork do Projeto
+Crie sua Branch de Funcionalidade (git checkout -b feature/AmazingFeature)
+Comite suas Alterações (git commit -m 'Adiciona uma funcionalidade incrível')
+Envie para a Branch (git push origin feature/AmazingFeature)
+Abra um Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+<p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
 <!-- CONTACT -->
-## Contact
+## Contato
 
 Lucas William Martins Lima - lucaswilliamml@gmail.com - [LinkedIn][linkedin-url] - [Portfolio][portfolio-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">de volta ao topop</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/lucaswmlima/meter-read-managment-tool.svg?style=for-the-badge
-[contributors-url]: https://github.com/lucaswmlima/meter-read-managment-tool/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/lucaswmlima/meter-read-managment-tool.svg?style=for-the-badge
-[forks-url]: https://github.com/lucaswmlima/meter-read-managment-tool/network/members
-[stars-shield]: https://img.shields.io/github/stars/lucaswmlima/meter-read-managment-tool.svg?style=for-the-badge
-[stars-url]: https://github.com/lucaswmlima/meter-read-managment-tool/stargazers
-[issues-shield]: https://img.shields.io/github/issues/lucaswmlima/meter-read-managment-tool.svg?style=for-the-badge
-[issues-url]: https://github.com/lucaswmlima/meter-read-managment-tool/issues
-[license-shield]: https://img.shields.io/github/license/lucaswmlima/meter-read-managment-tool.svg?style=for-the-badge
-[license-url]: https://github.com/lucaswmlima/meter-read-managment-tool/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/lucaswmlima/kayadoc.svg?style=for-the-badge
+[contributors-url]: https://github.com/lucaswmlima/kayadoc/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/lucaswmlima/kayadoc.svg?style=for-the-badge
+[forks-url]: https://github.com/lucaswmlima/kayadoc/network/members
+[stars-shield]: https://img.shields.io/github/stars/lucaswmlima/kayadoc.svg?style=for-the-badge
+[stars-url]: https://github.com/lucaswmlima/kayadoc/stargazers
+[issues-shield]: https://img.shields.io/github/issues/lucaswmlima/kayadoc.svg?style=for-the-badge
+[issues-url]: https://github.com/lucaswmlima/kayadoc/issues
+[license-shield]: https://img.shields.io/github/license/lucaswmlima/kayadoc.svg?style=for-the-badge
+[license-url]: https://github.com/lucaswmlima/kayadoc/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/https://www.linkedin.com/in/lucaswmlima/
 [portfolio-url]: https://portfolio-lucaswilliam.vercel.app/#projects
-[product-screenshot]: https://raw.githubusercontent.com/LucaswmLima/meter-read-managment-tool/main/assets/1.png
+[product-screenshot]: https://raw.githubusercontent.com/LucaswmLima/kayadoc/main/assets/1.png
 [HTML]: https://img.shields.io/badge/HTML-E44D26?style=for-the-badge&logo=html5&logoColor=white
 [HTML-url]: https://developer.mozilla.org/pt-BR/docs/Web/HTML
 [CSS]: https://img.shields.io/badge/CSS-2862E9?style=for-the-badge&logo=css3&logoColor=white
