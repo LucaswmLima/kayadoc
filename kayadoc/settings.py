@@ -9,8 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#y0)b=e46$8lsp)u$0fz%f61po+)+tm)u7f)v2jka+-+ss57d1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['kayadoc.onrender.com']
 
 # Application definition
 
@@ -118,6 +118,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 STATIC_URL = 'static/'
 
