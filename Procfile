@@ -1,1 +1,1 @@
-web: gunicorn Kayadoc.wsgi:application
+web: gunicorn kayadoc.wsgi:application
