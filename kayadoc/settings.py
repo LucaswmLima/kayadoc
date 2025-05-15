@@ -10,7 +10,9 @@ SECRET_KEY = 'django-insecure-#y0)b=e46$8lsp)u$0fz%f61po+)+tm)u7f)v2jka+-+ss57d1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ["kayadoc.onrender.com", "localhost", "127.0.0.1"]
+
+# Liberado todos os host para efeitos de teste no render
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
