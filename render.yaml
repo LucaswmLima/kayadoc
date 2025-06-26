@@ -6,9 +6,12 @@ services:
       apt-get update && apt-get install -y curl
       curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
       apt-get install -y nodejs
+      cd theme/static_src
+      npm install
+      npm run build
+      cd ../../
       pip install -r requirements.txt
       python manage.py migrate --noinput
-      python manage.py tailwind build
       python manage.py collectstatic --noinput
     startCommand: gunicorn kayadoc.wsgi:application
     envVars:
