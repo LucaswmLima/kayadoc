@@ -16,7 +16,7 @@
 <h3 align="center">KayaDoc Clone</h3>
 
   <p align="center">
-    Este projeto é uma réplica das páginas do KayaDoc usando Django e TailwindCSS.
+    Projeto da página madicos do site KayaDoc usando Django e TailwindCSS.
     <br />
     <a href="https://github.com/lucaswmlima/kayadoc"><strong>Explore a documentação »</strong></a>
     <br />
@@ -69,13 +69,16 @@ Este repositório é uma versão sanitizada (clone) do projeto real, com dados f
 
 <p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
+## Link do Projeto Hospedado
+https://kayadoc.onrender.com
 
 
-### Tecnologias Utilizadas
+## Tecnologias Utilizadas
 * [![Python][Python]][Python-url]
 * [![Django][Django]][Django-url]
 * [![Sqlite][Sqlite]][Sqlite-url]
 * [![Docker][Docker]][Docker-url]
+* [![Tailwindcss][Tailwindcss]][Tailwindcss-url]
 
 <p align="right">(<a href="#readme-top">de volta ao topo</a>)</p>
 
