@@ -127,7 +127,7 @@ Se você preferir rodar diretamente na sua máquina, siga esses passos:
    python manage.py runserver
    ```
 
-6. Acesse o projeto em: http://127.0.0.1:8000/medicos (Porta padrão)
+6. Acesse o projeto em: http://127.0.0.1:8000/  (Porta padrão)
 
 
 ### 2️⃣ Modo com Docker
@@ -151,7 +151,7 @@ Se você preferir rodar usando Docker, siga esses passos:
    ```sh
    docker-compose up --build
    ```
-5. Acesse o projeto em: http://localhost:8000/medicos (Porta padrão)
+5. Acesse o projeto em: http://localhost:8000/  (Porta padrão)
 
 6. Caso precise acessar o container, use o seguinte comando:
    ```sh
