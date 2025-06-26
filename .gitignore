@@ -16,3 +16,6 @@ __pycache__/
 venv/
 env/
 *.egg-info/
+
+# Arquivos estáticos gerados
+/staticfiles/
